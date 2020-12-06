@@ -14,29 +14,28 @@ def weight_count(common_list):
     return overall_weight, max_creature
 
 
-class Birds:
+class Animals:
 
-    def __init__(self, birds_type, name, voice):
-        self.birds_type = birds_type
-        self.name = name
-        self.voice = voice
-
-    def feed(self):
-        print(self.birds_type, self.name, 'накормлен')
-
-    def collect_eggs(self):
-        print(self.birds_type, self.name, 'собраны яйца')
-
-
-class Chordate:
-
-    def __init__(self, animal_type, name, voice):
+    def __init__(self, animal_type=None, name=None, voice=None):
         self.animal_type = animal_type
         self.name = name
         self.voice = voice
 
-    def feed(self):
-        print(self.animal_type, self.name, 'накормлена')
+    def feed(self, animal_list=None):
+        if animal_list:
+            for animal in animal_list:
+                print(animal.animal_type, animal.name, 'накормлен')
+        else:
+            print(self.animal_type, self.name, 'накормлен')
+
+
+class Birds(Animals):
+
+    def collect_eggs(self):
+        print(self.animal_type, self.name, 'собраны яйца')
+
+
+class Chordate(Animals):
 
     def milking(self):
         print(self.animal_type, self.name, 'подоена')
@@ -112,4 +111,9 @@ print('Общий вес птиц: ' + str(total_weight) + '\nСамое тяж�
 
 total_weight, heaviest_creature = weight_count(all_animals)
 print('Общий вес животных: ' + str(total_weight) + '\nСамое тяжелый: ' + heaviest_creature)
+
+full_list = all_animals + all_birds
+test = Animals()
+test.feed(full_list)
+
 
