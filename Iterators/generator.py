@@ -1,6 +1,8 @@
 import hashlib
+from Decorators.logger import first_logging
 
 
+@first_logging
 def super_hash(file):
     start = 0
     with open(file, 'r') as text:

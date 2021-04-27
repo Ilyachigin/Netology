@@ -1,0 +1,5 @@
+Date: 2021-04-27 19:09:29.065336
+Name: super_hash
+Args: ('wiki.txt',), {}
+Return: <generator object super_hash at 0x7fdb68e65f20>
+
