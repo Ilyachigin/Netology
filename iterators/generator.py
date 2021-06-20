@@ -1,5 +1,5 @@
 import hashlib
-from Decorators.logger import first_logging
+from decorators.logger import first_logging
 
 
 @first_logging

@@ -1,0 +1,10 @@
+Date: 2021-04-27 19:15:59.169147
+Name: first_test
+Args: (1,), {'test': 123}
+Return: (1, 123)
+
+Date: 2021-04-27 19:16:04.769830
+Name: first_test
+Args: (1,), {'test': 123}
+Return: (1, 123)
+
